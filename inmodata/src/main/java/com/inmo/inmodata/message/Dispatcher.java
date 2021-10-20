@@ -35,6 +35,7 @@ public class Dispatcher {
     public static final String NAVI_WEATHER_INFO = "navi_weather_info";
     public static final String DATE_TIME_INFO = "date_time_info";
     public static final String FILE_TRANSFER_INFO = "file_transfer_info";
+    public static final String WIFI_DIRECT_INFO = "device_wifi_direct_info";
 
     //绑定状态
     public static final String BIND_DEVICE_STATE_BINDING = "binding";
