@@ -8,6 +8,32 @@ import com.inmo.inmodata.message.Dispatcher;
 public class FileTransferInfo extends AbstractInfo {
     private String type;
     private String instruction;
+
+    /**
+     * 手机端随机创建的热点名称
+     */
+    private String SSID;
+    /**
+     * 手机端随机创建的热点密码
+     */
+    private String PWD;
+
+    public String getSSID() {
+        return SSID;
+    }
+
+    public void setSSID(String SSID) {
+        this.SSID = SSID;
+    }
+
+    public String getPWD() {
+        return PWD;
+    }
+
+    public void setPWD(String PWD) {
+        this.PWD = PWD;
+    }
+
     public FileTransferInfo() {
         type = getType();
     }
