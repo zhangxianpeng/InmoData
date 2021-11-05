@@ -5,6 +5,15 @@ public class Contacts {
     private String phone;
     private String note;
 
+    public Contacts() {
+    }
+
+    public Contacts(String name, String phone, String note) {
+        this.name = name;
+        this.phone = phone;
+        this.note = note;
+    }
+
     public String getName() {
         return name;
     }
