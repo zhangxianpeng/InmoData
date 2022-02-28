@@ -8,9 +8,11 @@ import com.inmo.inmodata.AbstractInfo;
 import com.inmo.inmodata.contacts.ContactsInfo;
 import com.inmo.inmodata.device.BatteryInfo;
 import com.inmo.inmodata.device.BondedInfo;
+import com.inmo.inmodata.device.BrightnessInfo;
 import com.inmo.inmodata.device.CalenderEventInfo;
 import com.inmo.inmodata.device.DateTimeInfo;
 import com.inmo.inmodata.device.FileTransferInfo;
+import com.inmo.inmodata.device.VolumeInfo;
 import com.inmo.inmodata.navi.BtNaviEndInfo;
 import com.inmo.inmodata.navi.BtNaviInfo;
 import com.inmo.inmodata.navi.BtNaviVoiceInfo;
@@ -38,6 +40,8 @@ public class Dispatcher {
     public static final String FILE_TRANSFER_INFO = "file_transfer_info";
     public static final String WIFI_DIRECT_INFO = "device_wifi_direct_info";
     public static final String CALENDER_EVENT_INFO = "calender_event_info";
+    public static final String BRIGHTNESS_INFO = "brightness_info";
+    public static final String VOLUME_INFO = "volume_info";
 
     //绑定状态
     public static final String BIND_DEVICE_STATE_BINDING = "binding";
@@ -77,6 +81,10 @@ public class Dispatcher {
                         return gson.fromJson(msg, FileTransferInfo.class);
                     case CALENDER_EVENT_INFO:
                         return gson.fromJson(msg, CalenderEventInfo.class);
+                    case BRIGHTNESS_INFO:
+                        return gson.fromJson(msg, BrightnessInfo.class);
+                    case VOLUME_INFO:
+                        return gson.fromJson(msg, VolumeInfo.class);
                 }
             } else {
                 Log.e("Dispatcher", "message must has type field!!");
