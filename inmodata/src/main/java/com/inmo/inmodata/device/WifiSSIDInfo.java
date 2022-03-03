@@ -9,15 +9,6 @@ public class WifiSSIDInfo extends AbstractInfo {
     private String type;
     private String ssid;
 
-    @Override
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getSsid() {
         return ssid;
     }
