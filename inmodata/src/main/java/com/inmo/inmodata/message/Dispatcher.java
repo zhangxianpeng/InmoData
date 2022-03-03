@@ -12,7 +12,9 @@ import com.inmo.inmodata.device.BrightnessInfo;
 import com.inmo.inmodata.device.CalenderEventInfo;
 import com.inmo.inmodata.device.DateTimeInfo;
 import com.inmo.inmodata.device.FileTransferInfo;
+import com.inmo.inmodata.device.LeBoCommandInfo;
 import com.inmo.inmodata.device.VolumeInfo;
+import com.inmo.inmodata.device.WifiSSIDInfo;
 import com.inmo.inmodata.navi.BtNaviEndInfo;
 import com.inmo.inmodata.navi.BtNaviInfo;
 import com.inmo.inmodata.navi.BtNaviVoiceInfo;
@@ -42,6 +44,9 @@ public class Dispatcher {
     public static final String CALENDER_EVENT_INFO = "calender_event_info";
     public static final String BRIGHTNESS_INFO = "brightness_info";
     public static final String VOLUME_INFO = "volume_info";
+
+    public static final String LEBO_CAST_COMMAND = "lebo_cast_command";
+    public static final String WIFI_SSID = "wifi_ssid";
 
     //绑定状态
     public static final String BIND_DEVICE_STATE_BINDING = "binding";
@@ -85,6 +90,10 @@ public class Dispatcher {
                         return gson.fromJson(msg, BrightnessInfo.class);
                     case VOLUME_INFO:
                         return gson.fromJson(msg, VolumeInfo.class);
+                    case LEBO_CAST_COMMAND:
+                        return gson.fromJson(msg, LeBoCommandInfo.class);
+                    case WIFI_SSID:
+                        return gson.fromJson(msg, WifiSSIDInfo.class);
                 }
             } else {
                 Log.e("Dispatcher", "message must has type field!!");
