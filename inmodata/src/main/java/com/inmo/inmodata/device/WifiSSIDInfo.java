@@ -8,6 +8,15 @@ import com.inmo.inmodata.message.Dispatcher;
 public class WifiSSIDInfo extends AbstractInfo {
     private String type;
     private String ssid;
+    private boolean isApOpen = false;
+
+    public boolean isApOpen() {
+        return isApOpen;
+    }
+
+    public void setApOpen(boolean apOpen) {
+        isApOpen = apOpen;
+    }
 
     public String getSsid() {
         return ssid;
