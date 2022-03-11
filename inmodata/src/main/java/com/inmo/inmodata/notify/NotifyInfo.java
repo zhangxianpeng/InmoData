@@ -11,6 +11,15 @@ public class NotifyInfo extends AbstractInfo {
     private String packageName;
     private String title;
     private String content;
+    private String labelName;
+
+    public String getLabelName() {
+        return labelName;
+    }
+
+    public void setLabelName(String labelName) {
+        this.labelName = labelName;
+    }
 
     public NotifyInfo() {
         type = getType();
