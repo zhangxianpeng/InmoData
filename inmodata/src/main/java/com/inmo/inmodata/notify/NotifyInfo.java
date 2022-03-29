@@ -1,5 +1,8 @@
 package com.inmo.inmodata.notify;
 
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
+
 import com.inmo.inmodata.AbstractInfo;
 import com.inmo.inmodata.MessageType;
 import com.inmo.inmodata.message.Dispatcher;
@@ -12,9 +15,18 @@ public class NotifyInfo extends AbstractInfo {
     private String title;
     private String content;
     private String labelName;
+    private Drawable icon;
 
     public String getLabelName() {
         return labelName;
+    }
+
+    public Drawable getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Drawable icon) {
+        this.icon = icon;
     }
 
     public void setLabelName(String labelName) {
