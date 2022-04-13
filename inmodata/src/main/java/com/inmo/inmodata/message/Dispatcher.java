@@ -10,6 +10,7 @@ import com.inmo.inmodata.device.BatteryInfo;
 import com.inmo.inmodata.device.BondedInfo;
 import com.inmo.inmodata.device.BrightnessInfo;
 import com.inmo.inmodata.device.CalenderEventInfo;
+import com.inmo.inmodata.device.ControlCoordinateInfo;
 import com.inmo.inmodata.device.DateTimeInfo;
 import com.inmo.inmodata.device.FileTransferInfo;
 import com.inmo.inmodata.device.LeBoCommandInfo;
@@ -44,6 +45,7 @@ public class Dispatcher {
     public static final String CALENDER_EVENT_INFO = "calender_event_info";
     public static final String BRIGHTNESS_INFO = "brightness_info";
     public static final String VOLUME_INFO = "volume_info";
+    public static final String CONTROL_COORDINATE_INFO = "control_coordinate_info";
 
     public static final String LEBO_CAST_COMMAND = "lebo_cast_command";
     public static final String WIFI_SSID = "wifi_ssid";
@@ -94,6 +96,8 @@ public class Dispatcher {
                         return gson.fromJson(msg, LeBoCommandInfo.class);
                     case WIFI_SSID:
                         return gson.fromJson(msg, WifiSSIDInfo.class);
+                    case CONTROL_COORDINATE_INFO:
+                        return gson.fromJson(msg, ControlCoordinateInfo.class);
                 }
             } else {
                 Log.e("Dispatcher", "message must has type field!!");
