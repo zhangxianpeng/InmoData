@@ -5,12 +5,14 @@ import com.inmo.inmodata.BleControlData;
 import com.inmo.inmodata.MessageType;
 import com.inmo.inmodata.message.Dispatcher;
 
+import java.io.Serializable;
+
 /**
  * @author Jack
  * @date 2022/4/13 16:13
  */
 @MessageType(type = Dispatcher.CONTROL_COORDINATE_INFO)
-public class ControlCoordinateInfo extends AbstractInfo {
+public class ControlCoordinateInfo extends AbstractInfo implements Serializable {
 
     private String type;
     private float x;
