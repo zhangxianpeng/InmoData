@@ -1,6 +1,7 @@
 package com.inmo.inmodata.device;
 
 import com.inmo.inmodata.AbstractInfo;
+import com.inmo.inmodata.BleControlData;
 import com.inmo.inmodata.MessageType;
 import com.inmo.inmodata.message.Dispatcher;
 
@@ -12,27 +13,38 @@ import com.inmo.inmodata.message.Dispatcher;
 public class ControlCoordinateInfo extends AbstractInfo {
 
     private String type;
-    private int x;
-    private int y;
+    private float x;
+    private float y;
+    @BleControlData
+    private int motion;
 
     public ControlCoordinateInfo() {
         this.type = getType();
     }
 
-    public int getX() {
+    public float getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    public int getY() {
+    public float getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(float y) {
         this.y = y;
+    }
+
+    @BleControlData
+    public int getMotion() {
+        return motion;
+    }
+
+    public void setMotion(@BleControlData int motion) {
+        this.motion = motion;
     }
 
     @Override
