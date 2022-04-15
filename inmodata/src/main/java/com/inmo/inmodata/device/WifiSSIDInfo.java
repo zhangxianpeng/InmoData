@@ -10,6 +10,34 @@ public class WifiSSIDInfo extends AbstractInfo {
     private String ssid;
     private boolean isApOpen = false;
 
+    private String pwd;
+    private String content;
+    private String contentType;
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getContentType() {
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
     public boolean isApOpen() {
         return isApOpen;
     }
