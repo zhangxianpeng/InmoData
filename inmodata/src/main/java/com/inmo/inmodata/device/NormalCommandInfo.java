@@ -1,6 +1,8 @@
 package com.inmo.inmodata.device;
 
 import com.inmo.inmodata.AbstractInfo;
+import com.inmo.inmodata.MessageType;
+import com.inmo.inmodata.message.Dispatcher;
 
 import java.io.Serializable;
 
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @author Jack
  * @date 2022/4/21 15:05
  */
+@MessageType(type = Dispatcher.NORMAL_COMMAND_INFO)
 public class NormalCommandInfo extends AbstractInfo implements Serializable {
 
     private String type;
