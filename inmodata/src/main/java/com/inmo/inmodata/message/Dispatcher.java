@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import com.inmo.inmodata.AbstractInfo;
 import com.inmo.inmodata.contacts.ContactsInfo;
 import com.inmo.inmodata.device.BatteryInfo;
+import com.inmo.inmodata.device.BitmapValueInfo;
 import com.inmo.inmodata.device.BondedInfo;
 import com.inmo.inmodata.device.BrightnessInfo;
 import com.inmo.inmodata.device.CalenderEventInfo;
@@ -48,6 +49,7 @@ public class Dispatcher {
     public static final String VOLUME_INFO = "volume_info";
     public static final String CONTROL_COORDINATE_INFO = "control_coordinate_info";
     public static final String NORMAL_COMMAND_INFO = "normal_command_info";
+    public static final String BITMAP_VALUE_INFO = "bitmap_value_info";
 
     public static final String LEBO_CAST_COMMAND = "lebo_cast_command";
     public static final String WIFI_SSID = "wifi_ssid";
@@ -102,6 +104,8 @@ public class Dispatcher {
                         return gson.fromJson(msg, ControlCoordinateInfo.class);
                     case NORMAL_COMMAND_INFO:
                         return gson.fromJson(msg, NormalCommandInfo.class);
+                    case BITMAP_VALUE_INFO:
+                        return gson.fromJson(msg, BitmapValueInfo.class);
                 }
             } else {
                 Log.e("Dispatcher", "message must has type field!!");
