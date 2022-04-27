@@ -16,6 +16,7 @@ import com.inmo.inmodata.device.DateTimeInfo;
 import com.inmo.inmodata.device.FileTransferInfo;
 import com.inmo.inmodata.device.LeBoCommandInfo;
 import com.inmo.inmodata.device.NormalCommandInfo;
+import com.inmo.inmodata.device.TimeZoneInfo;
 import com.inmo.inmodata.device.VolumeInfo;
 import com.inmo.inmodata.device.WifiSSIDInfo;
 import com.inmo.inmodata.navi.BtNaviEndInfo;
@@ -32,7 +33,7 @@ import org.json.JSONObject;
  */
 public class Dispatcher {
     private static Gson gson = new Gson();
-    //绑定消息头
+    // 绑定消息头
     public static final String BIND_DEVICE_INFO = "bind_device";
     public static final String BIND_BATTERY_INFO = "battery_info";
     public static final String CONTACTS_INFO = "contacts_info";
@@ -50,6 +51,7 @@ public class Dispatcher {
     public static final String CONTROL_COORDINATE_INFO = "control_coordinate_info";
     public static final String NORMAL_COMMAND_INFO = "normal_command_info";
     public static final String BITMAP_VALUE_INFO = "bitmap_value_info";
+    public static final String TIME_ZONE_INFO = "time_zone_info";
 
     public static final String LEBO_CAST_COMMAND = "lebo_cast_command";
     public static final String WIFI_SSID = "wifi_ssid";
@@ -106,6 +108,8 @@ public class Dispatcher {
                         return gson.fromJson(msg, NormalCommandInfo.class);
                     case BITMAP_VALUE_INFO:
                         return gson.fromJson(msg, BitmapValueInfo.class);
+                    case TIME_ZONE_INFO:
+                        return gson.fromJson(msg, TimeZoneInfo.class);
                 }
             } else {
                 Log.e("Dispatcher", "message must has type field!!");
