@@ -14,9 +14,18 @@ import java.io.Serializable;
 public class TimeZoneInfo extends AbstractInfo implements Serializable {
 
     private String type;
+    private String command;
     private String date;
     private String time;
     private String timeZone;
+
+    public String getCommand() {
+        return command;
+    }
+
+    public void setCommand(String command) {
+        this.command = command;
+    }
 
     public String getDate() {
         return date;
@@ -46,6 +55,7 @@ public class TimeZoneInfo extends AbstractInfo implements Serializable {
     public String toString() {
         return "TIME_ZONE_INFO{" +
                 "type='" + type + '\'' +
+                ", command='" + command + '\'' +
                 ", date='" + date + '\'' +
                 ", time='" + time + '\'' +
                 ", timeZone='" + timeZone + '\'' +
