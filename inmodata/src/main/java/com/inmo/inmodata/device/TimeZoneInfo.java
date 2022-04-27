@@ -51,6 +51,10 @@ public class TimeZoneInfo extends AbstractInfo implements Serializable {
         this.timeZone = timeZone;
     }
 
+    public TimeZoneInfo() {
+        type = getType();
+    }
+
     @Override
     public String toString() {
         return "TIME_ZONE_INFO{" +
