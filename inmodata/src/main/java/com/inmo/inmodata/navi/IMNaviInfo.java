@@ -24,6 +24,12 @@ public class IMNaviInfo extends AbstractInfo {
     public final static int TYPE_TENCENT = 3;
     public final static int TYPE_OTHER = 4;
 
+    //================导航出行方式===============//
+    public final static int TRAVEL_WALK = 0;
+    public final static int TRAVEL_BICYCLE = 1;
+    public final static int TRAVEL_ELECTRIC_BICYCLE = 2;
+    public final static int TRAVEL_CAR = 3;
+
     //https://a.amap.com/lbs/static/unzip/Android_Navi_Doc/index.html 具体可以参考
     //左转 2
     public final static String TYPE_LEFT = "left";
@@ -119,6 +125,11 @@ public class IMNaviInfo extends AbstractInfo {
     private int naviMapType;
 
     /**
+     * 导航出行方式，步行、自行车、电动自行车、汽车
+     */
+    private int naviTravelType;
+
+    /**
      * 导航状态
      */
     private String naviState;
@@ -181,6 +192,14 @@ public class IMNaviInfo extends AbstractInfo {
 
     public IMNaviInfo() {
         type = getType();
+    }
+
+    public int getNaviTravelType() {
+        return naviTravelType;
+    }
+
+    public void setNaviTravelType(int naviTravelType) {
+        this.naviTravelType = naviTravelType;
     }
 
     public int getmTurnType() {
